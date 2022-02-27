@@ -23,25 +23,38 @@ class MyApp extends StatelessWidget {
           //appBar: AppBar(title: Center(child: Text('Мой authpage test'))),
           body: Container(
               width: double.infinity,
-              padding: EdgeInsets.symmetric(horizontal: 50),
+              padding: EdgeInsets.symmetric(horizontal: 15),
               child: SingleChildScrollView(
                 child: Column(children:  [
                   const SizedBox(height: 20),
-                  Row(
-                    children: const [
-                      Icon(Icons.people_outlined, color: Colors.black,
-                          size: 30),
-                      Text(' Регистрация ',
-                        style : const TextStyle(fontSize : 20,
-                                fontWeight: FontWeight.bold,
-                                color : Color.fromRGBO(92,92,92,1.0)
-                        ),)
-                    ],
+                  Center(
+                    child: Row(
+                      children: const [
+                        Icon(Icons.people_outlined, color: Colors.black,
+                            size: 30),
+                        Text(' Регистрация ',
+                          style : const TextStyle(fontSize : 20,
+                                  fontWeight: FontWeight.bold,
+                                  color : Color.fromRGBO(92,92,92,1.0)
+                          ),)
+                      ],
+                    ),
+                  ),
+                  Divider(
+                    height: 5,
+                    thickness: 1,
+                    indent: 5,
+                    endIndent: 5,
+                    color: Colors.grey[500],
                   ),
                   const SizedBox(height: 40),
-                  Center(
-                    child: Text('Чтобы зарегистрироваться, введите свой номер телефона и почту',
+                  const Center(
+                    child: Text('Чтобы зарегистрироваться, введите',
                         style : TextStyle(fontSize : 16,color : Color(0xFFc4c4c4)),),
+                  ),
+                  const Center(
+                    child: Text('свой номер телефона и почту',
+                      style : TextStyle(fontSize : 16,color : Color(0xFFc4c4c4)),),
                   ),
                   const SizedBox(height: 20),
                   const Text('Телефон',
@@ -69,7 +82,9 @@ class MyApp extends StatelessWidget {
                       )
                   ),
                   const SizedBox(height: 40),
-                  Text('Вам придет четырехзначный код,который будет вашим паролем',
+                  const Text('Вам придет четырехзначный код,',
+                    style : TextStyle(fontSize : 14,color : Color(0xFFc4c4c4)),),
+                  const Text('который будет вашим паролем',
                     style : TextStyle(fontSize : 14,color : Color(0xFFc4c4c4)),),
                   const SizedBox(height: 20),
                   Text('Изменить пароль можно будет в личном кабинете после регистрации',
